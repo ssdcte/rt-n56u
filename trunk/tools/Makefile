@@ -33,10 +33,10 @@ endif
 go_build:
 	# https://studygolang.com/dl/golang/go$(go_version).linux-amd64.tar.gz
 	# https://gomirrors.org/dl/go/go$(go_version).linux-amd64.tar.gz
-
+	# https://golang.google.cn/dl/go$(go_version).linux-amd64.tar.gz
 	mkdir -p $(THISDIR)/go
 	( if [ ! -f $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz ]; then \
-	curl --create-dirs -L https://studygolang.com/dl/golang/go$(go_version).linux-amd64.tar.gz -o $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz ; \
+	curl --create-dirs -L https://golang.google.cn/dl/go$(go_version).linux-amd64.tar.gz -o $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz ; \
 	fi )
 	( if [ ! -d $(THISDIR)/go/go ]; then \
 	tar xfv $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz -C go ; \
